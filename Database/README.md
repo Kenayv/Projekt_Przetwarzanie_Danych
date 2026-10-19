@@ -1,3 +1,7 @@
+## Schemat bazy danych
+
+![Schemat bazy danych](db_schema.png)
+
 ```
 [Users]
 	Id PK
