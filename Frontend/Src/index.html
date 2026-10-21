@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta
+            name="description"
+            content="ZGUBA — zgłaszaj i odnajduj zgubione przedmioty na interaktywnej mapie."
+        />
+        <title>ZGUBA — Znajdź swój przedmiot</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="#start" aria-label="ZGUBA, strona główna"
+                    >ZGUBA</a
+                >
+                <nav
+                    class="header-nav"
+                    id="navigation"
+                    aria-label="Menu główne"
+                >
+                    <a href="#jak-to-dziala">Jak to działa</a>
+                    <a href="#funkcje">Funkcje</a>
+                    <a href="#czat">Czat</a>
+                    <a href="#kontakt">Kontakt</a>
+                </nav>
+                <a class="btn btn-dark header-cta" href="mapa.php"
+                    >Przeglądaj mapę <span aria-hidden="true">↗</span></a
+                >
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="navigation"
+                    aria-label="Otwórz menu"
+                >
+                    ☰
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section
+                class="container hero"
+                id="start"
+                aria-labelledby="hero-title"
+            >
+                <div>
+                    <span class="eyebrow">Zgubione i znalezione</span>
+                    <h1 id="hero-title">
+                        Znajdź swój <span class="highlight">przedmiot.</span>
+                    </h1>
+                    <p>
+                        Zgubiłeś coś? A może coś znalazłeś? Odkrywaj zgłoszenia
+                        na mapie i pomóż przedmiotom wrócić do właścicieli.
+                    </p>
+                    <div class="actions">
+                        <a href="mapa.php" class="btn btn-dark"
+                            >Przeglądaj mapę
+                            <span aria-hidden="true">→</span></a
+                        >
+                        <a href="dodaj.php" class="btn btn-outline"
+                            >Dodaj zgłoszenie
+                            <span aria-hidden="true">＋</span></a
+                        >
+                    </div>
+                </div>
+                <div class="hero-art">
+                    <img
+                        src="assets/hero.png"
+                        alt="Ilustracja mapy ze zgłoszeniami kluczy i portfela"
+                        width="1448"
+                        height="1086"
+                        fetchpriority="high"
+                    />
+                </div>
+            </section>
+
+            <section
+                class="container how"
+                id="jak-to-dziala"
+                aria-labelledby="how-title"
+            >
+                <h2 class="section-heading" id="how-title">Jak to działa?</h2>
+                <div class="steps">
+                    <article class="step">
+                        <div class="step-top">
+                            <span class="number">1</span
+                            ><span class="step-symbol" aria-hidden="true"
+                                >✎</span
+                            >
+                        </div>
+                        <h3>Dodaj zgłoszenie</h3>
+                        <p>
+                            Opisz przedmiot, wybierz kategorię i zaznacz
+                            lokalizację.
+                        </p>
+                    </article>
+                    <article class="step">
+                        <div class="step-top">
+                            <span class="number">2</span
+                            ><span class="step-symbol" aria-hidden="true"
+                                >⌖</span
+                            >
+                        </div>
+                        <h3>Przeglądaj mapę</h3>
+                        <p>
+                            Znajduj rzeczy zgubione i znalezione w wybranej
+                            okolicy.
+                        </p>
+                    </article>
+                    <article class="step">
+                        <div class="step-top">
+                            <span class="number">3</span
+                            ><span class="step-symbol" aria-hidden="true"
+                                >☏</span
+                            >
+                        </div>
+                        <h3>Skontaktujcie się</h3>
+                        <p>
+                            Porozmawiajcie przez czat i umówcie bezpieczne
+                            przekazanie rzeczy.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section
+                class="container feature-row lost"
+                id="zgubiles"
+                aria-labelledby="lost-title"
+            >
+                <div class="feature-copy">
+                    <h2 class="section-heading" id="lost-title">
+                        Zgubiłeś coś?
+                    </h2>
+                    <p>
+                        Przeszukaj interaktywną mapę i sprawdź, czy ktoś znalazł
+                        Twój przedmiot. Wyszukuj po nazwie, kategorii lub
+                        lokalizacji.
+                    </p>
+                    <a href="mapa.php" class="btn btn-dark"
+                        >Szukaj na mapie <span aria-hidden="true">→</span></a
+                    >
+                </div>
+                <div class="feature-art">
+                    <img
+                        src="assets/search.png"
+                        alt="Ilustracja wyszukiwania zgubionych rzeczy na mapie"
+                        width="1448"
+                        height="1086"
+                        loading="lazy"
+                    />
+                </div>
+            </section>
+
+            <section
+                class="container feature-row found"
+                id="znalazles"
+                aria-labelledby="found-title"
+            >
+                <div class="feature-art">
+                    <img
+                        src="assets/report.png"
+                        alt="Ilustracja formularza dodawania znalezionego plecaka"
+                        width="1448"
+                        height="1086"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="feature-copy">
+                    <h2 class="section-heading" id="found-title">
+                        Znalazłeś coś?
+                    </h2>
+                    <p>
+                        Dodaj zgłoszenie z nazwą, opisem, zdjęciem i miejscem
+                        znalezienia. To kilka prostych kroków, które mogą pomóc
+                        właścicielowi.
+                    </p>
+                    <a href="dodaj.php" class="btn btn-green"
+                        >Dodaj zgłoszenie <span aria-hidden="true">＋</span></a
+                    >
+                </div>
+            </section>
+
+            <section
+                class="container feature-row chat"
+                id="czat"
+                aria-labelledby="chat-title"
+            >
+                <div class="feature-copy">
+                    <h2 class="section-heading" id="chat-title">
+                        Skontaktujcie się.
+                    </h2>
+                    <p>
+                        Wbudowany czat pozwala porozmawiać bezpośrednio z osobą,
+                        która znalazła lub zgubiła przedmiot, bez publikowania
+                        numeru telefonu.
+                    </p>
+                    <a href="czat.php" class="btn btn-outline"
+                        >Przejdź do czatu <span aria-hidden="true">→</span></a
+                    >
+                </div>
+                <div class="feature-art">
+                    <img
+                        src="assets/chat.png"
+                        alt="Ilustracja rozmowy przez wbudowany czat"
+                        width="1448"
+                        height="1086"
+                        loading="lazy"
+                    />
+                </div>
+            </section>
+
+            <section
+                class="container features"
+                id="funkcje"
+                aria-labelledby="features-title"
+            >
+                <h2 class="section-heading" id="features-title">
+                    Funkcje aplikacji
+                </h2>
+                <p class="section-intro">
+                    Proste narzędzia, które ułatwiają odnalezienie zguby i
+                    kontakt z drugą osobą.
+                </p>
+                <div class="feature-cards">
+                    <article class="feature-card">
+                        <span class="icon" aria-hidden="true">⌖</span>
+                        <h3>Skupienie na lokalizacji</h3>
+                        <p>
+                            Przeglądaj zgłoszenia w wybranej okolicy i sprawdzaj
+                            punkty bezpośrednio na mapie.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="icon" aria-hidden="true">▤</span>
+                        <h3>Wybór kategorii</h3>
+                        <p>
+                            Filtruj przedmioty według kategorii, takich jak
+                            klucze, dokumenty, elektronika czy torby.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="icon" aria-hidden="true">☆</span>
+                        <h3>Wyróżnienie ogłoszenia</h3>
+                        <p>
+                            Planowana płatna opcja zwiększająca widoczność
+                            wybranego zgłoszenia.
+                        </p>
+                    </article>
+                </div>
+                <div class="feature-extra">
+                    <img
+                        src="assets/features.png"
+                        alt="Ilustracja lokalizacji, wyboru kategorii oraz wyróżniania zgłoszeń"
+                        width="1448"
+                        height="1086"
+                        loading="lazy"
+                    />
+                </div>
+            </section>
+
+            <section
+                class="container callout"
+                id="kontakt"
+                aria-labelledby="cta-title"
+            >
+                <div>
+                    <h2 id="cta-title">Pomóż zgubie wrócić do domu.</h2>
+                    <p>
+                        Masz coś do zgłoszenia? Dodaj informację i zaznacz
+                        miejsce na mapie.
+                    </p>
+                </div>
+                <a href="dodaj.php" class="btn"
+                    >Dodaj zgłoszenie <span aria-hidden="true">→</span></a
+                >
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <a class="brand" href="#start">ZGUBA</a
+                    ><span>Mniejsze zguby. Większe powroty.</span>
+                </div>
+                <nav class="footer-links" aria-label="Linki w stopce">
+                    <a href="#jak-to-dziala">Jak to działa</a
+                    ><a href="#funkcje">Funkcje</a
+                    ><a href="#kontakt">Kontakt</a>
+                </nav>
+                <span class="copyright"
+                    >© <span id="year">2026</span> ZGUBA</span
+                >
+            </div>
+        </footer>
+        <script>
+            const menuButton = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".header-nav");
+            menuButton.addEventListener("click", () => {
+                const isOpen = menu.classList.toggle("is-open");
+                menuButton.setAttribute("aria-expanded", String(isOpen));
+                menuButton.setAttribute(
+                    "aria-label",
+                    isOpen ? "Zamknij menu" : "Otwórz menu",
+                );
+                menuButton.textContent = isOpen ? "×" : "☰";
+            });
+            menu.querySelectorAll("a").forEach((link) =>
+                link.addEventListener("click", () => {
+                    menu.classList.remove("is-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.setAttribute("aria-label", "Otwórz menu");
+                    menuButton.textContent = "☰";
+                }),
+            );
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>
