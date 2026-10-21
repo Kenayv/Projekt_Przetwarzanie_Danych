@@ -45,7 +45,8 @@ button {
     width: min(1160px, calc(100% - 56px));
     margin-inline: auto;
 }
-.site-header {
+
+.naglowek {
     position: sticky;
     top: 0;
     z-index: 20;
@@ -53,28 +54,28 @@ button {
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
 }
-.header-inner {
+.gora {
     height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
 }
-.brand {
+.logo {
     font-size: 25px;
     font-weight: 950;
     letter-spacing: -0.09em;
     white-space: nowrap;
 }
-.header-nav {
+.menu {
     display: flex;
     align-items: center;
     gap: 30px;
     font-size: 14px;
     font-weight: 600;
 }
-.header-nav a:hover,
-.footer-links a:hover {
+.menu a:hover,
+.stopka-linki a:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
 }
@@ -97,25 +98,25 @@ button {
 .btn:hover {
     transform: translateY(-2px);
 }
-.btn-dark {
+.btn-czarny {
     background: var(--ink);
     color: #fff;
 }
-.btn-dark:hover {
+.btn-czarny:hover {
     background: #333;
 }
-.btn-outline {
+.btn-ramka {
     border-color: #cdd0d5;
     background: #fff;
 }
-.btn-green {
+.btn-zielony {
     background: #477764;
     color: #fff;
 }
-.btn-green:hover {
+.btn-zielony:hover {
     background: #345f4f;
 }
-.menu-toggle {
+.menu-btn {
     display: none;
     border: 1px solid var(--line);
     background: white;
@@ -128,14 +129,15 @@ button {
 main section {
     scroll-margin-top: 92px;
 }
-.hero {
+
+.start {
     padding: 86px 0 75px;
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
     align-items: center;
     gap: 36px;
 }
-.eyebrow {
+.etykieta {
     display: inline-block;
     font-size: 12px;
     letter-spacing: 0.14em;
@@ -144,14 +146,14 @@ main section {
     color: #77718a;
     margin-bottom: 16px;
 }
-.hero h1 {
+.start h1 {
     margin: 0;
     font-size: clamp(48px, 5.8vw, 78px);
     line-height: 1.06;
     letter-spacing: -0.075em;
     font-weight: 850;
 }
-.highlight {
+.wyroznienie {
     background: linear-gradient(
         transparent 38%,
         #e9ddfb 38%,
@@ -161,62 +163,63 @@ main section {
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
-.hero p {
+.start p {
     margin: 26px 0 30px;
     max-width: 475px;
     font-size: 18px;
     line-height: 1.65;
     color: var(--muted);
 }
-.actions {
+.przyciski {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
 }
-.hero-art img {
+.obrazek-start img {
     width: 100%;
     filter: drop-shadow(0 8px 16px rgba(34, 38, 45, 0.045));
 }
-.section-heading {
+.tytul {
     font-size: clamp(30px, 3.1vw, 42px);
     line-height: 1.15;
     letter-spacing: -0.055em;
     margin: 0 0 14px;
 }
-.section-intro {
+.opis {
     color: var(--muted);
     max-width: 580px;
     line-height: 1.7;
     margin: 0;
 }
-.how {
+
+.jak {
     padding: 42px 40px 46px;
     background: #f8f8fa;
     border-radius: var(--radius);
 }
-.how .section-heading {
+.jak .tytul {
     text-align: center;
     margin-bottom: 34px;
 }
-.steps {
+.kroki {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
-.step {
+.krok {
     background: #fff;
     border: 1px solid #f0f0f2;
     border-radius: 17px;
     padding: 26px 22px;
     min-height: 173px;
 }
-.step-top {
+.krok-gora {
     display: flex;
     gap: 12px;
     align-items: center;
     margin-bottom: 17px;
 }
-.number {
+.nr {
     display: grid;
     place-items: center;
     width: 33px;
@@ -226,27 +229,28 @@ main section {
     font-size: 14px;
     font-weight: 800;
 }
-.step:nth-child(2) .number {
+.krok:nth-child(2) .nr {
     background: #dff2e8;
 }
-.step:nth-child(3) .number {
+.krok:nth-child(3) .nr {
     background: #f9e6e7;
 }
-.step-symbol {
+.znak {
     font-size: 25px;
 }
-.step h3 {
+.krok h3 {
     font-size: 17px;
     margin: 0 0 9px;
     letter-spacing: -0.02em;
 }
-.step p {
+.krok p {
     margin: 0;
     color: var(--muted);
     font-size: 14px;
     line-height: 1.6;
 }
-.feature-row {
+
+.sekcja-info {
     display: grid;
     grid-template-columns: 0.78fr 1.22fr;
     align-items: center;
@@ -256,84 +260,86 @@ main section {
     border-radius: var(--radius);
     overflow: hidden;
 }
-.feature-row.lost {
+.sekcja-info.zgubione {
     background: #f8f5fd;
 }
-.feature-row.found {
+.sekcja-info.znalezione {
     background: #f1f8f4;
     grid-template-columns: 1.12fr 0.88fr;
 }
-.feature-row.chat {
+.sekcja-info.czat {
     background: #f8f9fb;
     margin-top: 24px;
 }
-.feature-copy p {
+.tekst-info p {
     font-size: 16px;
     line-height: 1.75;
     color: var(--muted);
     max-width: 420px;
     margin: 0 0 24px;
 }
-.feature-art img {
+.obrazek img {
     width: 100%;
     border-radius: 16px;
     mix-blend-mode: multiply;
 }
-.features {
+
+.funkcje {
     padding: 95px 0 100px;
 }
-.features > .section-heading,
-.features > .section-intro {
+.funkcje > .tytul,
+.funkcje > .opis {
     text-align: center;
     margin-inline: auto;
 }
-.features > .section-intro {
+.funkcje > .opis {
     margin-bottom: 34px;
 }
-.feature-cards {
+.karty {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
-.feature-card {
+.karta {
     border-radius: 17px;
     padding: 26px;
     min-height: 220px;
 }
-.feature-card:nth-child(1) {
+.karta:nth-child(1) {
     background: #f5f0fc;
 }
-.feature-card:nth-child(2) {
+.karta:nth-child(2) {
     background: #f0f8f3;
 }
-.feature-card:nth-child(3) {
+.karta:nth-child(3) {
     background: #fdf1f2;
 }
-.feature-card .icon {
+.karta .symbol {
     font-size: 30px;
     line-height: 1;
     margin-bottom: 25px;
     display: block;
 }
-.feature-card h3 {
+.karta h3 {
     font-size: 18px;
     letter-spacing: -0.03em;
     margin: 0 0 10px;
 }
-.feature-card p {
+.karta p {
     margin: 0;
     color: #575c64;
     font-size: 14px;
     line-height: 1.65;
 }
-.feature-extra {
+.grafika {
     width: min(800px, 100%);
     margin: 28px auto 0;
 }
-.feature-extra img {
+.grafika img {
     border-radius: 16px;
 }
-.callout {
+
+.dolna-sekcja {
     background: #181818;
     color: #fff;
     padding: 46px 50px;
@@ -344,47 +350,48 @@ main section {
     gap: 28px;
     margin-bottom: 92px;
 }
-.callout h2 {
+.dolna-sekcja h2 {
     margin: 0 0 10px;
     font-size: 30px;
     letter-spacing: -0.05em;
 }
-.callout p {
+.dolna-sekcja p {
     margin: 0;
     color: #cbcbd1;
     line-height: 1.5;
 }
-.callout .btn {
+.dolna-sekcja .btn {
     background: #fff;
     color: #171717;
     white-space: nowrap;
 }
-.site-footer {
+
+.stopka {
     border-top: 1px solid var(--line);
     padding: 26px 0;
 }
-.footer-inner {
+.stopka-srodek {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
 }
-.footer-brand {
+.stopka-logo {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.footer-brand span {
+.stopka-logo span {
     color: var(--muted);
     font-size: 12px;
 }
-.footer-links {
+.stopka-linki {
     display: flex;
     gap: 24px;
     font-size: 13px;
 }
-.copyright {
+.prawa {
     color: #90939b;
     font-size: 12px;
 }
@@ -392,20 +399,21 @@ main section {
     outline: 3px solid #8e73d6;
     outline-offset: 4px;
 }
+
 @media (max-width: 850px) {
     .container {
         width: min(100% - 36px, 640px);
     }
-    .menu-toggle {
+    .menu-btn {
         display: block;
     }
-    .header-inner {
+    .gora {
         height: 68px;
     }
-    .header-cta {
+    .link-mapa {
         display: none;
     }
-    .header-nav {
+    .menu {
         position: absolute;
         left: 0;
         right: 0;
@@ -418,50 +426,50 @@ main section {
         align-items: stretch;
         gap: 20px;
     }
-    .header-nav.is-open {
+    .menu.otwarte {
         display: flex;
     }
-    .hero {
+    .start {
         grid-template-columns: 1fr;
         padding: 62px 0 55px;
         gap: 20px;
     }
-    .hero p {
+    .start p {
         margin: 22px 0 24px;
     }
-    .hero-art {
+    .obrazek-start {
         max-width: 600px;
         justify-self: center;
     }
-    .steps,
-    .feature-cards {
+    .kroki,
+    .karty {
         grid-template-columns: 1fr;
     }
-    .how {
+    .jak {
         padding: 35px 22px;
     }
-    .step {
+    .krok {
         min-height: auto;
     }
-    .feature-row,
-    .feature-row.found {
+    .sekcja-info,
+    .sekcja-info.znalezione {
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 36px 24px;
     }
-    .feature-row.found .feature-art {
+    .sekcja-info.znalezione .obrazek {
         order: 2;
     }
-    .feature-row.found .feature-copy {
+    .sekcja-info.znalezione .tekst-info {
         order: 1;
     }
-    .features {
+    .funkcje {
         padding: 70px 0;
     }
-    .feature-card {
+    .karta {
         min-height: auto;
     }
-    .callout {
+    .dolna-sekcja {
         padding: 35px 26px;
         flex-direction: column;
         align-items: flex-start;
@@ -469,13 +477,13 @@ main section {
     }
 }
 @media (max-width: 420px) {
-    .hero h1 {
+    .start h1 {
         font-size: 46px;
     }
-    .actions .btn {
+    .przyciski .btn {
         width: 100%;
     }
-    .footer-inner {
+    .stopka-srodek {
         align-items: flex-start;
         flex-direction: column;
     }
